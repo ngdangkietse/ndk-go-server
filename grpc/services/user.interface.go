@@ -8,6 +8,6 @@ import (
 
 type IUserService interface {
 	UpsertUser(ctx context.Context, req *account.PUser) (*account.PUpsertUserResponse, error)
-	FindUserById(ctx context.Context, req *common.PIdRequest) (*account.PUser, error)
-	FindUserByEmail(ctx context.Context, req *common.PEmailRequest) (*account.PUser, error)
+	FindUserById(ctx context.Context, req *common.PIdRequest) (*account.PGetUserResponse, error)
+	FindUserByEmail(ctx context.Context, req *common.PEmailRequest) (*account.PGetUserResponse, error)
 }
